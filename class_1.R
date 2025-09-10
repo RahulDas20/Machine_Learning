@@ -88,3 +88,6 @@ test_set %>%
   mutate(y_hat = y_hat) %>%
   group_by(sex) %>%
   summarise(accuracy = mean(y_hat == sex))
+
+
+#maximum F_score

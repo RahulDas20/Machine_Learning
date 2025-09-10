@@ -96,3 +96,15 @@ max(f_1)
 #this maximum is achieved when we use the following cutoff
 best_cutoff <- cutoff[which.max(f_1)]
 best_cutoff
+
+
+y_hat <- ifelse(test_set$height > 66,"Male", "Female") |>
+  factor(levels = levels(test_set$sex))
+
+sensitivity(data = y_hat, reference = test_set$sex)
+specificity(data = y_hat, reference = test_set$sex)
+
+# it means this algorithm can predict a positive when the result is actually positive about 40% and 
+# but it can predict negatives about 90% of the time
+
+ 
